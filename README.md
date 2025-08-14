@@ -3,6 +3,18 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 Run the command `git clone` https://github.com/Persu1t/Chat-Chai
 
+Then configure your .env.local file with following values
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=Your CLERK PUBLISHABLE KEY
+CLERK_SECRET_KEY= YOUR CLERK SECRET KEY
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
+NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
+NEXT_API_KEY_ELEVENLABS= YOUR ELEVENLABS API KEY
+NEXT_HITESH_VOICE_ID= YOUR CUSTOM VOICE KEY
+NEXT_PIYUSH_VOICE_ID= YOUR CUSTOM VOICE KEY
+```
+
 Run the development server:
 
 ```bash
