@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 import Image from "next/image";
+import { FaPaperPlane } from "react-icons/fa";
 
 const Page = () => {
   const [input, setInput] = React.useState("");
@@ -56,9 +57,9 @@ const Page = () => {
   };
 
   return (
-    <div className="flex flex-col h-[90vh] bg-base-200">
+    <div className="flex flex-col h-[90vh]">
       {/* Chat Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 sm:max-w-screen mx-auto drop-shadow-lg shadow-stone-300">
              {messages.length === 0 && (
           <div className="flex flex-col items-center justify-center w-full h-full text-center p-6">
             <div className="bg-base-200 rounded-xl shadow-lg p-8 max-w-xl flex flex-col items-center">
@@ -99,7 +100,7 @@ const Page = () => {
             <div>
               {/* Audio Button for AI */}
               {msg.role === "assistant" && msg.audio && !msg.loading && (
-                <audio controls className="mb-1 w-48">
+                <audio controls className="mb-1 w-56">
                   <source src={msg.audio} type="audio/mpeg" />
                 </audio>
               )}
@@ -136,16 +137,16 @@ const Page = () => {
       {/* Input Area */}
       <form
         onSubmit={handleSubmit}
-        className="p-4 border-t bg-base-100 flex gap-2 items-center"
+        className="p-4 bg-base-100 flex gap-2 items-center"
       >
-        <textarea
-          className="textarea textarea-bordered flex-1 resize-none"
+        <input
+          className="input flex-1"
           placeholder="Type your message..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
         <button type="submit" className="btn btn-primary">
-          Send
+          <FaPaperPlane />
         </button>
       </form>
     </div>

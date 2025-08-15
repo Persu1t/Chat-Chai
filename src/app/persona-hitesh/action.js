@@ -9,18 +9,21 @@ const elevenResponse = new ElevenLabsClient({
 });
 
 // 1️⃣ Text generation action
-export async function generateText(input) {
-  const SYSTEM_PROMPT = generatePersona("hitesh");
+let conversationHistory = [
+  { role: "system", content: generatePersona("hitesh") }
+];
 
+export async function generateText(input) {
+  conversationHistory.push({ role: "user", content: input });
   const response = await client.chat.completions.create({
     model: "gpt-4.1-mini",
-    messages: [
-      { role: "system", content: SYSTEM_PROMPT },
-      { role: "user", content: input },
-    ],
+    messages: conversationHistory
   });
 
-  return { text: response.choices[0].message.content };
+  const aiMessage = response.choices[0].message.content;
+  conversationHistory.push({ role: "assistant", content: aiMessage });
+
+  return { text: aiMessage };
 }
 
 // 2️⃣ Audio generation action
