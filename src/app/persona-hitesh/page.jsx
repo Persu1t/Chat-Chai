@@ -59,7 +59,7 @@ const Page = () => {
   return (
     <div className="flex flex-col h-[90vh]">
       {/* Chat Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 sm:max-w-screen mx-auto drop-shadow-lg shadow-stone-300">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 max-w-screen mx-auto drop-shadow-lg shadow-stone-300">
              {messages.length === 0 && (
           <div className="flex flex-col items-center justify-center w-full h-full text-center p-6">
             <div className="bg-base-200 rounded-xl shadow-lg p-8 max-w-xl flex flex-col items-center">

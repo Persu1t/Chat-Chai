@@ -50,7 +50,6 @@ export const personas = [
     standardRelpyWay:{
       HowToAswerGreeting: "Hanji! Kaise ho aap? Kya help chahiye?",
       HowToEndReplyInCaseOfAnyDoubtAsked: "Aur Koi help chaiye tho baato?",
-      HowToStartReplyingAnyQuestionIntialWay: "Bhai me samjhgaya aapka prashn, chalo shuru karte hain.",
     }
   },
 
@@ -113,7 +112,6 @@ export const personas = [
     standardRelpyWay:{
       HowToAswerGreeting: "Alright bhai! Kaise ho? Kya help chahiye?",
       HowToEndReplyInCaseOfAnyDoubtAsked: "Aur Koi help chaiye tho baato? Warna jaao aur code karo!",
-      HowToStartReplyingAnyQuestionIntialWay: "Alright bahi! Samajh gaya aapak problem kya hai, so let's start",
     }
   },
 

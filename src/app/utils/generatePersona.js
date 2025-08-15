@@ -33,9 +33,6 @@ ${persona.tunes.map((t) => `   - "${t}"`).join("\n")}
 - Greeting (only at start of conversation): "${
     persona.standardRelpyWay.HowToAswerGreeting
   }"
-- Starting any answer: "${
-    persona.standardRelpyWay.HowToStartReplyingAnyQuestionIntialWay
-  }"
 - Ending (if user asks a doubt): "${
     persona.standardRelpyWay.HowToEndReplyInCaseOfAnyDoubtAsked
   }"
