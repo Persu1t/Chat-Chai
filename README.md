@@ -14,6 +14,11 @@ NEXT_API_KEY_ELEVENLABS= YOUR ELEVENLABS API KEY
 NEXT_HITESH_VOICE_ID= YOUR CUSTOM VOICE KEY
 NEXT_PIYUSH_VOICE_ID= YOUR CUSTOM VOICE KEY
 ```
+Test credentials:
+```bash
+email: rishabh@coding.com
+password: Rishabh2002#
+```
 
 Run the development server:
 
